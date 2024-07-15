@@ -21,7 +21,9 @@ const Header = () => {
           <button className="icon-btn">
             <img src={Notification} alt="Notification" />
           </button>
+
           <Logout />
+          
           <button className="flex-center !ml-8 gap-3">
             <span className="text-lg font-medium lg:text-xl">Jahidul Sany</span>
             <img

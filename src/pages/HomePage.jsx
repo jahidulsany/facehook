@@ -1,10 +1,10 @@
-import Header from "../components/common/Header";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <>
-      <Header />
       <div>HomePage</div>
+      <Link to="/me">Click to see Profile</Link>
     </>
   );
 };

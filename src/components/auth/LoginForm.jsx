@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth";
 import Field from "../common/Field";
 
 const LoginForm = () => {
+  const { setAuth } = useAuth();
   const navigate = useNavigate();
   const {
     register,
@@ -11,7 +13,11 @@ const LoginForm = () => {
   } = useForm();
 
   const submitForm = (formData) => {
-    console.log(formData);
+    // Will make an API call
+    // Will return Tokensa and user login information
+
+    const user = { ...formData };
+    setAuth({user});
     navigate("/");
   };
 
