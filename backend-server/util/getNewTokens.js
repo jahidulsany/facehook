@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
  * @param {string} user.id - The user ID.
  * @returns {Object} - An object containing the generated token and refresh token.
  */
+
 const getNewTokens = (user) => {
   const token = jwt.sign(
     { id: user.id, email: user.email, type: "access" },
